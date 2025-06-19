@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import GetLocalISOString from "../services/getLocalISOString";
 
 export default function Home() {
   const [expense, setExpense] = useState({
@@ -11,7 +12,8 @@ export default function Home() {
 
   const [totalDailyExpense, setTotalDailyExpense] = useState([]);
   const [date, setDate] = useState("");
-  const currentDate = new Date().toISOString().split("T")[0];
+  const localISOString = GetLocalISOString();
+  const currentDate = localISOString.split("T")[0];
 
   useEffect(() => {
     setDate(currentDate);
