@@ -42,7 +42,7 @@ const Login = () => {
           />
         </div>
         <button className="flex cursor-pointer justify-center rounded-md bg-[#46a440] hover:bg-[#4fb847] px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-          Login
+          {loading ? "Loading..." : "Login"}
         </button>
         <Link to={"/signup"}>signup?</Link>
       </form>
